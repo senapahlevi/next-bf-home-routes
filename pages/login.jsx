@@ -53,7 +53,7 @@ function Login() {
     try {
       const datas = { username, password };
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/login`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/login`,
         datas
       );
       toast.success("Berhasil login ");

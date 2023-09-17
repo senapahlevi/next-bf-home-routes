@@ -1,6 +1,7 @@
 // static/pages/index.js (Next.js app)
 import React, { useState } from "react";
 import axios from "axios";
+import Header from "../header";
 
 export default function Generate() {
   const [text, setText] = useState("");
@@ -37,6 +38,8 @@ export default function Generate() {
 
   return (
     <div className="container">
+      <Header />
+
       <h1>QR Code Generator</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

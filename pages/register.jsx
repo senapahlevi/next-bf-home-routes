@@ -41,7 +41,7 @@ function Register() {
     try {
       const datas = { username, email, password };
       const response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/register`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/register`,
         datas
       );
       toast.success("Berhasil Register ");
