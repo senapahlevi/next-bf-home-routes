@@ -1,8 +1,10 @@
 // static/pages/index.js (Next.js app)
 import React, { useState } from "react";
 import axios from "axios";
-import Header from "../header";
-
+import Header from "../headerweb";
+import Headerweb from "../../pages/headerweb";
+import Hero from "../hero";
+ 
 export default function Generate() {
   const [text, setText] = useState("");
   const [link, setLink] = useState("");
@@ -37,35 +39,37 @@ export default function Generate() {
   };
 
   return (
-    <div className="container">
-      <Header />
-
-      <h1>QR Code Generator</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="text">Text</label>
-          <input
-            type="text"
-            id="text"
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="link">Link</label>
-          <input
-            type="url"
-            id="link"
-            value={link}
-            onChange={(e) => setLink(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Generate</button>
-      </form>
-      {image && <img src={image} alt="QR code" width={200} height={200} />}
-      {error && <div>{error} woy</div>}
+    <div>
+      <Hero/>
     </div>
+    // <div className="container">
+    //   <Headerweb />
+    //   <h1>QR Code Generator</h1>
+    //   <form onSubmit={handleSubmit}>
+    //     <div className="form-group">
+    //       <label htmlFor="text">Text</label>
+    //       <input
+    //         type="text"
+    //         id="text"
+    //         value={text}
+    //         onChange={(e) => setText(e.target.value)}
+    //         required
+    //       />
+    //     </div>
+    //     <div className="form-group">
+    //       <label htmlFor="link">Link</label>
+    //       <input
+    //         type="url"
+    //         id="link"
+    //         value={link}
+    //         onChange={(e) => setLink(e.target.value)}
+    //         required
+    //       />
+    //     </div>
+    //     <button type="submit">Generate</button>
+    //   </form>
+    //   {image && <img src={image} alt="QR code" width={200} height={200} />}
+    //   {error && <div>{error} woy</div>}
+    // </div>
   );
 }

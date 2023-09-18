@@ -1,7 +1,7 @@
 // "use client";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Header from "./header";
+import Header from "./headerweb";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import HomeAddress from './homeaddress'
-import Header from './header'
+import Header from './headerweb'
 import { useEffect, useRef, useState } from 'react'
 import { authMiddleware } from '../utils/authMiddleware'
 import { getCookie, removeCookie } from '../utils/cookie'
@@ -44,7 +44,7 @@ export default function Home() {
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM0hoZiuTA5JVkJJeNNjjkd6wlD1JP5C0&libraries=places&callback=initMap"></script>
         
       </Head> */}
-      <Header />
+      {/* <Header /> */}
      <HomeAddress />
      <Footer />
        </div>
