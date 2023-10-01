@@ -1,8 +1,8 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
 /* body {
   font-family: "Poppins", sans-serif;
-} */
-/* :root {
+}
+:root {
   --white-1: #ffffff;
   --white-2: #eeeeee;
   --white-3: #ecf1f4;
@@ -32,22 +32,22 @@
   color: #ffffff;
 }
 .text-white-2 {
-  color: var(--white-2);
+  color:  #eeeeee;
 }
 .text-black-1 {
-  color: var(--black);
+  color: #000909;
 }
 .text-grey-1 {
-  color: var(--grey-1);
+  color: #888888;
 }
 .text-grey-2 {
-  color: var(--grey-2);
+  color: #666666;
 }
 .text-darkGreen {
-  color: var(--darkGreen);
+  color: #082d28;
 }
 .text-darkTosca {
-  color: var(--darkTosca);
+  color: #569b9b;
 }
 .text-subtleGreen {
   color: #90bcb7;

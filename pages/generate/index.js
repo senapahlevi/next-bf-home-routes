@@ -4,7 +4,8 @@ import axios from "axios";
 import Header from "../headerweb";
 import Headerweb from "../../pages/headerweb";
 import Hero from "../hero";
- 
+import Footer from "../footer";
+
 export default function Generate() {
   const [text, setText] = useState("");
   const [link, setLink] = useState("");
@@ -15,22 +16,27 @@ export default function Generate() {
     e.preventDefault();
     try {
       // Call the backend API to generate and save the QR code
-       const response = await axios
-        .post("http://localhost:8080/api/qr-generate", {
-          text: text,
-          text_url: link,
-        },{
-          responseType: "blob",
-        })
+      const response = await axios
+        .post(
+          "http://localhost:8080/api/qr-generate",
+          {
+            text: text,
+            text_url: link,
+          },
+          {
+            responseType: "blob",
+          }
+        )
         .then((res) => {
           const imageBlob = new Blob([res.data]);
-          const url = URL.createObjectURL(imageBlob)
-           setImage(url);
+          const url = URL.createObjectURL(imageBlob);
+          setImage(url);
         })
-        .catch((error) => { // Error handling here
+        .catch((error) => {
+          // Error handling here
           console.error(error);
         });
-  
+
       // Set the image state to display the QR code
     } catch (error) {
       // setError(error);
@@ -40,8 +46,8 @@ export default function Generate() {
 
   return (
     <div>
-      <Hero/>
-    </div>
+       <Hero />
+     </div>
     // <div className="container">
     //   <Headerweb />
     //   <h1>QR Code Generator</h1>

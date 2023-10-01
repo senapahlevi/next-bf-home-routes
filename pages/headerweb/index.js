@@ -56,15 +56,9 @@ function Headerweb() {
               </a>
               <a
                 className="nav-text text-lg font-semibold leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative active"
-                href="#"
+                href="/"
               >
                 Home
-              </a>
-              <a
-                className="nav-text text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
-                href="#"
-              >
-                Feature
               </a>
               <a
                 className="nav-text text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
@@ -78,20 +72,6 @@ function Headerweb() {
               >
                 About Us
               </a>
-              <a
-                className="nav-text text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
-                href="#"
-              >
-                Contact
-              </a>
-              <div className="flex items-center justify-end w-full lg:hidden mt-3">
-                <button className="text-black font-light py-3 px-8 focus:outline-none">
-                  Log In
-                </button>
-                <button className="btn-try text-white text-lg py-3 px-8 rounded-xl focus:outline-none hover:shadow-lg font-semibold">
-                  Try Now
-                </button>
-              </div>
 
               <svg
                 onClick={() => setOpen(!open)}
@@ -110,9 +90,14 @@ function Headerweb() {
               </svg>
             </nav>
             <div className="hidden lg:inline-flex">
-              <button className="inline-flex text-black font-light text-lg leading-7 py-3 px-8 focus:outline-none">
-                Log In
-              </button>
+              <a
+                className="nav-text text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
+                href="/login"
+              >
+                <button className="inline-flex text-black font-light text-lg leading-7 py-3 px-8 focus:outline-none">
+                  Log In
+                </button>
+              </a>
               <button className="btn-try inline-flex text-white text-lg leading-7 py-3 px-8 rounded-xl focus:outline-none hover:shadow-lg font-semibold">
                 Try Now
               </button>

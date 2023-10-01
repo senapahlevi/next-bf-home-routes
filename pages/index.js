@@ -9,6 +9,7 @@ import { getCookie, removeCookie } from '../utils/cookie'
 import { useRouter } from 'next/router'
 import { isExpired, decodeToken } from "react-jwt";
 import Footer from './footer'
+import Generate from './generate'
 
 
 export default function Home() {
@@ -44,8 +45,9 @@ export default function Home() {
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM0hoZiuTA5JVkJJeNNjjkd6wlD1JP5C0&libraries=places&callback=initMap"></script>
         
       </Head> */}
-      {/* <Header /> */}
-     <HomeAddress />
+      <Header />
+     {/* <HomeAddress /> */}
+     <Generate />
      <Footer />
        </div>
   )

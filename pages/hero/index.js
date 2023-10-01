@@ -8,6 +8,7 @@ function Hero() {
   const [error, setError] = useState("");
   const [image, setImage] = useState(null);
 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -41,11 +42,12 @@ function Hero() {
   };
 
   return (
+    
     <div>
-      <section className={`subscribe ${styles["subscribe"]}`}>
-        <main className={`subscribe bg-gradient ${styles["bg-gradient"]}`}>
+      <section className={`subscribe ${styles["subscribe"]} `}>
+        <main className={` subscribe bg-gradient ${styles["bg-gradient"]} h-96`}>
           <div
-            className={`px-4 mx-auto max-w-screen-xl lg:px-24 ${styles["py-72"]}`}
+            className={`px-4 mx-auto max-w-xl lg:px-24 ${styles["py-72"]} py-12`}
           >
             <h1
               className={`font-semibold leading-snug text-center text-black-1 md:leading-9 ${styles["text-subscribe"]}`}
